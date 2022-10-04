@@ -14,7 +14,7 @@ const ListHead = props => {
                     <Head>
                         <title>{props.search} - Sports Store</title>
                     </Head>
-                    <h3 className={'text-center my-2 ' + classes.fontRoboto}>Search for "{props.search}"</h3>
+                    <h3 className={'text-center my-2 ' + classes.fontRoboto}>Search for <i>&quot;{props.search}&quot;</i></h3>
                 </>
             )}
 
