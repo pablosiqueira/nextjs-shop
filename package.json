@@ -1,0 +1,28 @@
+{
+  "name": "nextjs-shop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.0",
+    "mongodb": "^4.8.1",
+    "next": "^12.2.5",
+    "next-absolute-url": "^1.2.2",
+    "next-auth": "^4.10.3",
+    "nextjs-progressbar": "^0.0.14",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5"
+  }
+}

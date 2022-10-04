@@ -1,0 +1,29 @@
+.image{
+    height: 20rem;
+}
+
+
+.description h6{
+    text-transform: capitalize;
+    font-size: small;
+}
+
+.oldPrice{
+    text-decoration: line-through;
+}
+
+.btnRed{
+    background-color: #A30018;
+    border-color: #CCAD8F;
+    color: #CCAD8F;
+}
+
+.btnRed:hover{
+    background-color: #CCAD8F;
+    border-color: #A30018;
+    color: #A30018;
+}
+
+.sizesGroup button.btn-dark{
+    background-color: #A30018!important;
+}

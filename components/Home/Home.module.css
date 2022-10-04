@@ -1,0 +1,69 @@
+.actionsSection{
+    background-color: #CCAD8F;
+    justify-content: space-around;
+}
+
+.actionLink{
+    text-decoration: none;
+    color: #262626;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-inline: .5rem;
+}
+
+.actionLink:hover{
+    color: #A30018;
+}
+
+.newProdTitle{
+    background-color: #A30018;
+    color: #CCAD8F;
+}
+
+.newProdBody{
+    /*max-width: 1000px;*/
+    /*background-color: #CCAD8F;*/
+    background-image: url('/running.jpg');
+    background-repeat: round;
+}
+
+.newProdImg{
+    object-fit: contain;
+    height: 7rem;
+    width: 7rem;
+}
+
+.newProdCardBody{
+    align-items: center;
+    width: 450px;
+    background-color: #A30018;
+    justify-content: space-around;
+    cursor: pointer;
+    border-color: #262626;
+}
+
+.newProdCardBody:hover{
+    background-color: #262626;
+}
+
+.newProductCardText{
+    color: #CCAD8F;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.bottomDiv{
+    width: 100%;
+    background-color: #CCAD8F;
+}
+
+.bottomDiv img{
+    max-height: 200px;
+    object-fit: scale-down;
+    max-width: 100%;
+}

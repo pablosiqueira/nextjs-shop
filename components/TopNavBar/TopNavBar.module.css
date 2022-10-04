@@ -1,0 +1,52 @@
+.ctgbar{
+    background-color: #262626;
+    justify-content: center;
+  }
+  
+  .ctglink, .ctglinkDark{ 
+    font-size: larger;
+    text-transform: capitalize;
+  }
+
+  .ctglink{
+    color: #CCAD8F;
+    text-decoration: none;
+    background-color: transparent!important;
+  }
+
+  .ctglink:active, .ctglink:focus{
+    color: #CCAD8F;
+  }
+
+  .ctglink:focus-visible{
+    outline: none;
+  }
+  
+  .ctglink:hover{
+    color: #7EA3CC;
+  }
+
+  .ctglinkDark{
+    color: #262626;
+  }
+
+  .ctglinkDark:hover{
+    color: #A30018;
+  }
+
+  .bkgred{
+    background-color: #A30018;
+    color: #CCAD8F;
+  }
+
+  .bkgyellow{
+    background-color: #CCAD8F;
+    color: #262626;
+  }
+
+  .fontNeues{
+    font-family: 'Lobster', cursive;
+    color: #CCAD8F;
+    font-size: x-large;
+  }
+  
