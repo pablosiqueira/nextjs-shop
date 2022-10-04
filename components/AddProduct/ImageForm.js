@@ -12,7 +12,7 @@ const ImageForm = props => {
         {props.imgUrl && props.imgUrl !== '' && !props.imgError && <Image className="d-block mx-auto my-2 border border-secondary" 
         src={props.imgUrl}
         onError={()=>props.errorHandler(true)} 
-        style={{maxHeight: '15rem', maxWidth: 'inherit'}}/>}
+        style={{maxHeight: '15rem', maxWidth: 'inherit'}} alt='product preview image'/>}
         {props.imgError && props.imgUrl !== '' &&<p className="text-center text-danger"><BiError /> Image not found</p>}
         </>
     )

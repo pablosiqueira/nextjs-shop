@@ -1,0 +1,21 @@
+.fontRoboto{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.itemImage{
+    height: 8rem;
+    width: 8rem;
+    object-fit: contain;
+}
+
+.browseButton{
+    background-color: #262626;
+    color: #CCAD8F;
+    border-color: #CCAD8F;
+}
+
+.browseButton:hover{
+    background-color: #A30018;
+    border-color: #CCAD8F;
+}
+  

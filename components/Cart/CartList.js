@@ -6,6 +6,7 @@ import { CartContext } from "../../context/cart-context"
 import Spinner from "react-bootstrap/Spinner"
 import MessageModal from '../UI/MessageModal';
 import { useRouter } from "next/router"
+import classes from './Cart.module.css'
 
 const CartList = (props) => {
     const router = useRouter()
@@ -42,15 +43,15 @@ const CartList = (props) => {
     }
     return (
         <>
-            <h1 className="text-center my-4">My Cart</h1>
-            <div className="d-block mx-auto" style={{maxWidth: '500px'}}>
+            <h1 className={"text-center my-4 " + classes.fontRoboto}>My Cart</h1>
+            <div className={"d-block mx-auto " + classes.fontRoboto} style={{maxWidth: '500px'}}>
             {props.items.map(item => (
                 <CartItem product={item} key={item.cartId}/>
             ))}
             </div>
-            <div className="d-block mx-auto mb-4">
+            <div className={"d-block mx-auto mb-4 " + classes.fontRoboto}>
             <p className="text-center mb-2"><b>Total:</b> {props.total}</p>
-            {!isLoading && <Button className="d-block mx-auto" variant='dark' onClick={placeOrderHandler}>Place Order</Button>}
+            {!isLoading && <Button className={"d-block mx-auto " + classes.browseButton} onClick={placeOrderHandler}>Place Order</Button>}
 
             {isLoading && <div className='d-block mx-auto'>
             <Spinner className='d-block mx-auto' animation="border" role="status"></Spinner>

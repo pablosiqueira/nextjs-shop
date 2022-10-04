@@ -15,7 +15,7 @@ const FooterInfo = () => {
             <Row className={styles.aboutContact}>
                 <Col className={styles.description}>
                     <div className={styles.about}>
-                    <h6 className='mb-2'>About</h6>
+                    <h5 className='mb-2'>About</h5>
                     <p>Web page created by Pablo Siqueira. Bachelor in Computer Engineering and Science & Techonology 
                     by the Federal University of Rio Grande do Norte (UFRN) from Brazil and former exchange student of the Lappeeranta 
                     University of Technology (LUT) in Finland.</p>
@@ -23,7 +23,7 @@ const FooterInfo = () => {
                 </Col>
             
                 <Col className={styles.contact}>
-                    <h6>Contact & Networks</h6>
+                    <h5>Contact & Networks</h5>
                     <ul className={styles.footerlinks}>
                     <li><Button className={styles.btnNone} variant="outline-light" size="sm"><TbMail size='2rem' title='Mail Icon'/> pablo16@outlook.com</Button></li>
                     <li><Button variant="outline-light" size="sm" href="https://www.linkedin.com/in/pablo-siqueira-457867150/" target="_blank"><TbBrandLinkedin size="2rem" title='Linkedin Icon'/> Linkedin</Button></li>

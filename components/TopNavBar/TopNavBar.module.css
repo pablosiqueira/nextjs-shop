@@ -1,11 +1,15 @@
 .ctgbar{
     background-color: #262626;
     justify-content: center;
+    font-family: 'Lobster', cursive;
+    color: #CCAD8F;
+    font-size: large;
   }
   
   .ctglink, .ctglinkDark{ 
     font-size: larger;
     text-transform: capitalize;
+    font-family: 'Lobster', cursive;
   }
 
   .ctglink{
@@ -48,5 +52,9 @@
     font-family: 'Lobster', cursive;
     color: #CCAD8F;
     font-size: x-large;
+  }
+
+  .fontRoboto{
+    font-family: 'Roboto Condensed', sans-serif;
   }
   

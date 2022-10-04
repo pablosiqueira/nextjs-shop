@@ -5,6 +5,7 @@ import CartItemFooter from "./CartItemFooter";
 import { CartContext } from '../../context/cart-context';
 import { useContext } from "react";
 import Image from "react-bootstrap/Image";
+import classes from './Cart.module.css'
 
 const CartItem = (props) => {
     const cartCtx = useContext(CartContext)
@@ -17,10 +18,10 @@ const CartItem = (props) => {
 
     return (
     <>
-    <Card className="my-2">
+    <Card className={"my-2 " + classes.fontRoboto}>
     <Card.Body>
         <div className="d-flex">
-            <Image src={props.product.image} style={{height:'8rem',width:'8rem',objectFit:'contain'}} className="mx-2" fluid/>
+            <Image src={props.product.image} alt={props.product.name} className={"mx-2 " + classes.itemImage} fluid/>
             <div>
                 <Card.Title className="font-small">{props.product.name}</Card.Title>
                 <Card.Text>

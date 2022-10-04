@@ -6,6 +6,7 @@ import { hash } from 'bcryptjs';
 import Spinner from 'react-bootstrap/Spinner';
 import MessageModal from '../UI/MessageModal';
 import { UserContext } from '../../context/user-context';
+import classes from './Forms.module.css'
 
 const RegisterForm = props => {
     const userCtx = useContext(UserContext)
@@ -140,8 +141,8 @@ const RegisterForm = props => {
     }
     return (
     <>
-        <h1 className='text-center my-4 text-capitalize'>{props.user ? ('Edit User ' + props.mode) : 'Register'}</h1>
-        <Form className='d-block mx-auto mb-4' style={{maxWidth:'500px'}} onSubmit={props.user ? editUser : createUser}>
+        <h1 className={'text-center my-4 text-capitalize ' + classes.fontRoboto}>{props.user ? ('Edit User ' + props.mode) : 'Register'}</h1>
+        <Form className={'d-block mx-auto mb-4 ' + classes.fontRoboto} style={{maxWidth:'500px'}} onSubmit={props.user ? editUser : createUser}>
 
         {props.mode !== 'password' &&
         <FloatingLabel label="Email" className="mb-3">

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import classes from './ProductsList.module.css'
 
 const ListHead = props => {
     console.log(props.category)
@@ -13,7 +14,7 @@ const ListHead = props => {
                     <Head>
                         <title>{props.search} - Sports Store</title>
                     </Head>
-                    <h3 className='text-center my-2'>Search for "{props.search}"</h3>
+                    <h3 className={'text-center my-2 ' + classes.fontRoboto}>Search for "{props.search}"</h3>
                 </>
             )}
 
@@ -22,8 +23,8 @@ const ListHead = props => {
                     <Head>
                         <title>{fixedCategory} - Sports Store</title>
                     </Head>
-                    {fixedCategory === 'All products' && <h3 className='text-center my-2'>All Products</h3>}
-                    {fixedCategory !== 'All products' && <h3 className='text-center my-2'>Search in categories: "{fixedCategory}"</h3>}
+                    {fixedCategory === 'All products' && <h3 className={'text-center my-4 ' + classes.fontRoboto}>All Products</h3>}
+                    {fixedCategory !== 'All products' && <h3 className={'text-center my-4 ' + classes.fontRoboto}>Search in categories: <i>&quot;{fixedCategory}&quot;</i></h3>}
                 </>
             }
 

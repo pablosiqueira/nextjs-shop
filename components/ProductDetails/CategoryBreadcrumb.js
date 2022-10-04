@@ -1,4 +1,5 @@
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import classes from './ProductDetails.module.css'
 
 const CategoryBreadcrumb = (props) => {
     let links = [{link:'/products/', section: 'products'}]
@@ -12,8 +13,8 @@ const CategoryBreadcrumb = (props) => {
 
     return (
         <>
-        <Breadcrumb className='m-2 text-capitalize'>
-        <Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
+        <Breadcrumb className={'m-2 text-capitalize ' + classes.fontRoboto}>
+            <Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
             {links.map(item => (
                 <Breadcrumb.Item href={item.link} key={item.section}>{item.section}</Breadcrumb.Item>
             ))}

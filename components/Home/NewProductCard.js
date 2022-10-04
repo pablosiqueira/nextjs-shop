@@ -12,7 +12,7 @@ const NewProductCard = props => {
                 <div className={"border rounded d-inline-flex flex-wrap mx-2 my-2 p-1 " + classes.newProdCardBody} >
                     <div>
                         <Image src={imgError ? '/img_not_found.png' : props.product.image} className={classes.newProdImg} fluid
-                        onError={()=>setImgError(true)}/>
+                        onError={()=>setImgError(true)} alt={props.product.name}/>
                     </div>
                     <div className={classes.newProductCardText}>{props.product.name}</div>
                 </div>

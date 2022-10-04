@@ -6,6 +6,7 @@ import SizesForm from './SizesForm';
 import ImageForm from './ImageForm';
 import CategoryForm from './CategoryForm';
 import MessageModal from '../UI/MessageModal';
+import classes from './Forms.module.css'
 
 const AddProductForm = props => {
     const [name,setName] = useState(props.product ? props.product.name : '')
@@ -112,7 +113,7 @@ const AddProductForm = props => {
     }
 
     return(
-        <Form className='d-block mx-auto' onSubmit={submitForm} style={{maxWidth:'500px'}}>
+        <Form className={'d-block mx-auto ' + classes.fontRoboto} onSubmit={submitForm} style={{maxWidth:'500px'}}>
 
         <FloatingLabel className="mb-3" controlId="name" label='Name'>
             <Form.Control type="text" placeholder="Enter name" value={name} onChange={nameInputHandler} required />

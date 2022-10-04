@@ -7,6 +7,7 @@ import Link from "next/link";
 import {FaKey} from 'react-icons/fa'
 import {ImExit} from 'react-icons/im'
 import {HiOutlineNewspaper} from 'react-icons/hi'
+import classes from './UserArea.module.css'
 
 const UserMainPage = props => {
     const userCtx = useContext(UserContext)
@@ -17,10 +18,10 @@ const UserMainPage = props => {
             <Head>
                 <title>User Area</title>
             </Head>
-            <h1 className="text-center my-4">User Area</h1>
-                <div className="mx-1">
+            <h1 className={"text-center my-4 " + classes.fontRoboto}>User Area</h1>
+                <div className={"mx-1 " + classes.fontRoboto}>
                     <h5 className="text-center my-2">Personal Data - <Link href='/user/edit?mode=data'>Edit</Link></h5>
-                    <ListGroup variant="flush" className="d-block mx-auto border" style={{maxWidth:'max-content'}}>
+                    <ListGroup variant="flush" className="d-block mx-auto border" style={{maxWidth:'500px'}}>
                         <ListGroup.Item><b>Name: </b>{user.name}</ListGroup.Item>
                         <ListGroup.Item><b>E-mail: </b>{user.email}</ListGroup.Item>
                         <ListGroup.Item><b>Adress: </b><br/>
@@ -31,7 +32,7 @@ const UserMainPage = props => {
                     </ListGroup>
                 </div>
                 
-            <div className="d-flex flex-wrap justify-content-center my-4">
+            <div className={"d-flex flex-wrap justify-content-center my-4 " + classes.fontRoboto}>
                 <div className="m-1">
                     <Link href={'/user/orders/' + user._id}>
                     <Button variant="secondary">

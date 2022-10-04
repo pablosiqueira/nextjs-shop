@@ -21,7 +21,7 @@ const AddProductPage = props => {
         <Head>
             <title>Add Product - Sports Store</title>
         </Head>
-        <h1 className='text-center my-4'>Add Product</h1>
+        <h1 className='text-center my-4' style={{fontFamily: 'Roboto Condensed, sans-serif'}}>Add Product</h1>
         <AddProductForm onAddProduct={addProductHandler} mode='add' modalMessage='Created Product'/>
     </>
     )

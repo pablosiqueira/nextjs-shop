@@ -24,7 +24,7 @@ const NavUser = props => {
                 <FaUserCircle color='#262626' size='2.5rem'/> Hello {userCtx.user.name.split(' ')[0]}
             </Dropdown.Toggle>
       
-            <Dropdown.Menu>
+            <Dropdown.Menu className={classes.fontRoboto}>
               <Dropdown.Item href="/user">My Account</Dropdown.Item>
               <Dropdown.Item href={"/user/orders/" + userCtx.user._id}>My Orders</Dropdown.Item>
               <Dropdown.Divider />

@@ -6,12 +6,12 @@ const OrderItem = props => {
 
     return (
         <>
-        <div className="d-block mx-auto" style={{maxWidth:'500px'}}>
+        <div className={"d-block mx-auto " + classes.fontRoboto} style={{maxWidth:'500px'}}>
             {props.order.items.map((item,index) => {
                 return (
                     <div className="d-flex flex-wrap mb-4 justify-content-center align-items-center" key={index}>
                         <Link href={'/'+ item.id}>
-                            <Image src={item.image} className={classes.itemImage} fluid/>
+                            <Image src={item.image} className={classes.itemImage} alt={item.name} fluid/>
                         </Link>
                         <div className='mx-2' style={{width:'250px',}}>
                             <div className={classes.orderItemTitle}>{item.name}</div>

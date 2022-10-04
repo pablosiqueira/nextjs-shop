@@ -2,6 +2,9 @@
     height: 20rem;
 }
 
+.description{
+    margin-inline: 5%;
+}
 
 .description h6{
     text-transform: capitalize;
@@ -26,4 +29,8 @@
 
 .sizesGroup button.btn-dark{
     background-color: #A30018!important;
+}
+
+.fontRoboto, .description{
+    font-family: 'Roboto Condensed', sans-serif;
 }

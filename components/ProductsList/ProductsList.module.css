@@ -44,3 +44,19 @@
     margin-right: .5rem;
 }
 
+.backRed span{
+    background-color: #A30018!important;
+    color: #CCAD8F!important;
+    border-color: #CCAD8F!important;
+}
+
+.textDark a{
+    color: #262626!important;
+}
+
+.fontRoboto{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+

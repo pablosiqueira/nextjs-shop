@@ -25,7 +25,7 @@ const ProductList = (props) => {
                 </>
                 
                 }
-                {!props.loading && props.products.length === 0 && <h3 className='text-center'>No results found</h3>}  
+                {!props.loading && props.products.length === 0 && <h3 className='text-center font-roboto'>No results found</h3>}  
             </div>      
         </>
       );

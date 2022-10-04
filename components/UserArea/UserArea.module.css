@@ -13,3 +13,8 @@
     cursor: pointer;
     margin-inline: 1rem;
 }
+
+.fontRoboto{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+

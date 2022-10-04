@@ -2,6 +2,7 @@ import { MongoClient, ObjectId } from "mongodb"
 import Head from "next/head"
 import AddProductForm from "../../../components/AddProduct/AddProductForm"
 import { useRouter } from "next/router"
+import LoadingScreen from '../../../components/UI/LoadingScreen'
 
 const EditProductPage = (props) => {
     const router = useRouter()
@@ -33,7 +34,7 @@ const EditProductPage = (props) => {
     <Head>
         <title>Edit - {props.productData.name}</title>
     </Head>
-    <h1 className='text-center my-4'>Edit Product</h1>
+    <h1 className='text-center my-4' style={{fontFamily: 'Roboto Condensed, sans-serif'}}>Edit Product</h1>
     <AddProductForm onEditProduct={editProductHandler} product={props.productData} mode='edit' modalMessage='Edited Product'/>
     </>
 }

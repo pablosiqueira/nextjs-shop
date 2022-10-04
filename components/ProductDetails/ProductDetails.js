@@ -42,7 +42,7 @@ const ProductDetails = (props) => {
         <div className='d-flex justify-content-center flex-wrap mb-4'>
             <div className='my-2 mx-2'>
                 <Image src={imgError ? '/img_not_found.png' : props.product.image} fluid style={{maxHeight: '15rem'}} 
-                onError={()=>setImgError(true)}/>
+                onError={()=>setImgError(true)} alt={props.product.name}/>
             </div>
             <div className={classes.description}>
                 <h4>{props.product.name}</h4>

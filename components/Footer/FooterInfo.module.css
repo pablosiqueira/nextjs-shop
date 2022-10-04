@@ -63,6 +63,14 @@
     color: #CCAD8F!important;
 }
 
+.about h5, .contact h5{
+  font-family: 'Lobster', cursive;
+}
+
+.about p, .contact ul, .copyright{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 @media (max-width:600px)
 {
   .aboutContact{

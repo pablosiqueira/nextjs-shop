@@ -15,7 +15,7 @@ const NavDev = props => {
                 <BsGearFill color='#262626' size='2.5rem'/>
             </Dropdown.Toggle>
       
-            <Dropdown.Menu>
+            <Dropdown.Menu className={classes.fontRoboto}>
               <Dropdown.Item href={"/dev/add-product"}>Add Product</Dropdown.Item>
               <Dropdown.Item href={"/dev/edit-product/"}>Edit Product</Dropdown.Item>
             </Dropdown.Menu>

@@ -39,7 +39,7 @@ const ActionsMenu = props => {
 
       </section>
       <section className={classes.bottomDiv}>
-        <Image src='/ballgroup3.png' className="d-block mx-auto py-4"/>
+        <Image src='/ballgroup3.png' className="d-block mx-auto py-4" alt='group of sports items'/>
       </section>
     </>
     )

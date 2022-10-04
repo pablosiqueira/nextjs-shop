@@ -18,6 +18,7 @@
 .newProdTitle{
     background-color: #A30018;
     color: #CCAD8F;
+    font-family: 'Lobster', cursive;
 }
 
 .newProdBody{
@@ -40,6 +41,11 @@
     justify-content: space-around;
     cursor: pointer;
     border-color: #262626;
+    /*font-family: 'Bebas Neue', cursive;*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 
 .newProdCardBody:hover{
@@ -67,3 +73,10 @@
     object-fit: scale-down;
     max-width: 100%;
 }
+
+
+
+  .fontRoboto, .actionsSection{
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  

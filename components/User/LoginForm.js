@@ -4,6 +4,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import { useState, useContext } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import { UserContext } from '../../context/user-context';
+import classes from './Forms.module.css'
 
 
 const LoginForm = props => {
@@ -50,8 +51,8 @@ const LoginForm = props => {
     }
     return (
     <>
-        <h1 className='text-center my-4'>Login</h1>
-        <Form className='d-block mx-auto' style={{maxWidth:'500px'}} onSubmit={submitLoginForm} autoComplete="on">
+        <h1 className={'text-center my-4 ' + classes.fontRoboto}>Login</h1>
+        <Form className={'d-block mx-auto ' + classes.fontRoboto} style={{maxWidth:'500px'}} onSubmit={submitLoginForm} autoComplete="on">
 
         <input name="csrfToken" type="hidden" defaultValue={props.csrfToken} />
 

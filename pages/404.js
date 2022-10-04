@@ -13,7 +13,7 @@ const NotFoundPage = () => {
             </Head>
             <h1 className="text-center my-4">Page Not Found</h1>
             <div className="d-block mx-auto text-center my-4">
-                <div><Image src='/404.png'/></div>
+                <div><Image src='/404.png' alt='404 code icon'/></div>
                 <Button onClick={router.back} variant="danger" className="my-4"><TiArrowBack size='1.5rem'/> Go Back</Button>
             </div>
         </>
