@@ -12,7 +12,7 @@ const MessageModal = (props) => {
     >
       <Modal.Header closeButton>
       </Modal.Header>
-      <Modal.Body className={'text-center' + classes.fontRoboto}>
+      <Modal.Body className={'text-center ' + classes.fontRoboto}>
         <FiCheckCircle color='green' size='4rem'/>
         <p>{props.message}</p>
       </Modal.Body>

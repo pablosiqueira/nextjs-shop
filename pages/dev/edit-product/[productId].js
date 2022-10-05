@@ -35,7 +35,7 @@ const EditProductPage = (props) => {
         <title>Edit - {props.productData.name}</title>
     </Head>
     <h1 className='text-center my-4' style={{fontFamily: 'Roboto Condensed, sans-serif'}}>Edit Product</h1>
-    <AddProductForm onEditProduct={editProductHandler} product={props.productData} mode='edit' modalMessage='Edited Product'/>
+    <AddProductForm onEditProduct={editProductHandler} product={props.productData} mode='edit' modalMessage='Product edited with success'/>
     </>
 }
 

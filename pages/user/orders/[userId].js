@@ -31,7 +31,7 @@ const UserOrdersPage = (props) => {
         )
 }
 
-export async function getStaticPaths(context){
+/*export async function getStaticPaths(context){
     const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
     const db = client.db()
     const usersCollection = db.collection('users')
@@ -44,9 +44,9 @@ export async function getStaticPaths(context){
             }})),
         fallback: true       
     }
-}
+}*/
 
-export async function getStaticProps({params, query}){
+export async function getServerSideProps({params, query}){
     if(!params.userId || !ObjectId.isValid(params.userId)){
         return{
             notFound:true
@@ -89,7 +89,7 @@ export async function getStaticProps({params, query}){
         props:{
             orders: recievedOrders,
         },
-        revalidate: 300,
+        //revalidate: 300,
     }
   }
 
