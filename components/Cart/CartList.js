@@ -35,11 +35,16 @@ const CartList = (props) => {
     }
 
     const placeOrderHandler = () => {
-        const date = new Date()
-        const data = {...cartCtx.cart,address: userCtx.user.address, userId: userCtx.user._id.toString(), date}
-        console.log(data)
-        setIsLoading(true)
-        callPlaceOrderApi(data)
+        if(!userCtx.user){
+            router.push('/user')
+        }else{
+            const date = new Date()
+            const data = {...cartCtx.cart,address: userCtx.user.address, userId: userCtx.user._id.toString(), date}
+            console.log(data)
+            setIsLoading(true)
+            callPlaceOrderApi(data)
+        }
+        
     }
     return (
         <>
@@ -51,7 +56,8 @@ const CartList = (props) => {
             </div>
             <div className={"d-block mx-auto mb-4 " + classes.fontRoboto}>
             <p className="text-center mb-2"><b>Total:</b> {props.total}</p>
-            {!isLoading && <Button className={"d-block mx-auto " + classes.browseButton} onClick={placeOrderHandler}>Place Order</Button>}
+            {!isLoading && <Button className={"d-block mx-auto " + classes.browseButton} 
+            onClick={placeOrderHandler}>Place Order</Button>}
 
             {isLoading && <div className='d-block mx-auto'>
             <Spinner className='d-block mx-auto' animation="border" role="status"></Spinner>
