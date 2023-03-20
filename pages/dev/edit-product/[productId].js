@@ -40,7 +40,7 @@ const EditProductPage = (props) => {
 }
 
 export async function getStaticPaths(context){
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const productsCollection = db.collection('products')
     const products = await productsCollection.find({},{_id: 1}).toArray()
@@ -57,7 +57,7 @@ export async function getStaticPaths(context){
 
 export async function getStaticProps(context){
     const productId = context.params.productId
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const productsCollection = db.collection('products')
     const selectedProduct = await productsCollection.findOne({_id: ObjectId(productId)})

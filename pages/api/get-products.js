@@ -13,7 +13,7 @@ export async function getProducts(req,res){
         if(query.page){
                 currentPage = query.page
         }  
-        const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+        const client = await MongoClient.connect(process.env.MONGODB_URI)
         const db = client.db()
         let productsCollection
         //const category = {category: query.category}

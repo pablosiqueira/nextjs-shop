@@ -6,7 +6,7 @@ export async function placeOrder(req,res){
         const userId = new ObjectId(orderData.userId)
         let dataToadd = orderData
         dataToadd.userId = userId
-        const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+        const client = await MongoClient.connect(process.env.MONGODB_URI)
         const db = client.db()
         const usersCollection = db.collection('users')
         const ordersCollection = db.collection('orders')

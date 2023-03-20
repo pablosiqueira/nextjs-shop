@@ -18,7 +18,7 @@ const ProductDetail = (props) => {
 
 export async function getStaticPaths(context){
     //fetch data for a single meetup
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const productsCollection = db.collection('products')
     const products = await productsCollection.find({},{_id: 1}).toArray()
@@ -40,7 +40,7 @@ export async function getStaticProps(context){
             notFound:true
         }
     }
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const productsCollection = db.collection('products')
     const selectedProduct = await productsCollection.findOne({_id: ObjectId(productId)})

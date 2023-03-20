@@ -32,7 +32,7 @@ const UserOrdersPage = (props) => {
 }
 
 /*export async function getStaticPaths(context){
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const usersCollection = db.collection('users')
     const users = await usersCollection.find({},{'_id': 1}).toArray()
@@ -55,7 +55,7 @@ export async function getServerSideProps({params, query}){
 
     console.log(params.userId)
     const userId = new ObjectId(params.userId) 
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const ordersCollection = db.collection('orders')
     

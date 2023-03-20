@@ -58,7 +58,7 @@ const EditProductSearchPage = props => {
 
 export async function getServerSideProps({params, query}){
     console.log(query)
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const productsCollection = db.collection('products')
     let searchTerms = {}

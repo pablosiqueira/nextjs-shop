@@ -6,7 +6,7 @@ export async function getUpdatedProducts(req,res){
         ids = [...new Set(ids)]
         ids = ids.map(item => {return new ObjectId(item) })
         console.log(ids)
-        const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/products?retryWrites=true&w=majority')
+        const client = await MongoClient.connect(process.env.MONGODB_URI)
         const db = client.db()
         let productsCollection
         productsCollection = db.collection('products').find({_id: {$in: ids}}).toArray()
